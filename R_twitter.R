@@ -5,6 +5,7 @@ library(lubridate)
 
 user <- twitteR::getUser("oddhack")
 friends <- user$getFriends()
+# rectangularise?
 friend_data <- tibble(number = 1:length(friends))
 friend_data$handle <- sapply(friends, `[[`, "screenName")
 # friend_data <- tibble::rownames_to_column(friendcounts)
